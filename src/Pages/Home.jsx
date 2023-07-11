@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchStocks } from '../redux/features/stocks/stocksSlice';
+import { fetchDetails } from '../redux/features/details/detailsSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -23,13 +25,25 @@ const Home = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <ul>
+      <div
+        style={{ display: 'flex', flexDirection: 'column' }}
+      >
         {
           displayedStocks.map((stock) => (
-            <li key={stock.symbol}>{ stock.companyName }</li>
+            <button
+              type="button"
+              key={stock.symbol}
+              onClick={() => dispatch(fetchDetails(stock.symbol))}
+            >
+              <Link to={`/details/${stock.symbol}`}>
+                {' '}
+                { stock.companyName}
+                {' '}
+              </Link>
+            </button>
           ))
         }
-      </ul>
+      </div>
     </div>
   );
 };

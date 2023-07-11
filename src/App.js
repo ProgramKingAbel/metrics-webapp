@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route index element={<Home />} />
-      <Route path="stock" element={<Details />} />
+      <Route path="/details/:symbol" element={<Details />} />
     </Routes>
   );
 }
