@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchStocks } from '../redux/features/stocks/stocksSlice';
 
 const Home = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetchStocks();
-  }, []);
+    dispatch(fetchStocks());
+  }, [dispatch]);
   const stocks = useSelector((state) => state.stocks.stocks);
 
   const [searchQuery, setSearchQuery] = useState('');
