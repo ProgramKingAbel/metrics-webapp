@@ -6,9 +6,11 @@ import { fetchDetails } from '../redux/features/details/detailsSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(fetchStocks());
   }, [dispatch]);
+
   const stocks = useSelector((state) => state.stocks.stocks);
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -36,9 +38,7 @@ const Home = () => {
               onClick={() => dispatch(fetchDetails(stock.symbol))}
             >
               <Link to={`/details/${stock.symbol}`}>
-                {' '}
                 { stock.companyName}
-                {' '}
               </Link>
             </button>
           ))
