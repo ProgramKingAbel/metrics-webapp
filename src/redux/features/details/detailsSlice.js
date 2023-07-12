@@ -11,7 +11,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = process.env.REACT_APP_STOCK_DETAIL_URL;
 export const fetchDetails = createAsyncThunk('stock/details',
   async (symbol) => axios
-    .get(`${BASE_URL}/${symbol}?timeseries=5&apikey=${API_KEY}`)
+    .get(`${BASE_URL}/${symbol}?timeseries=14&apikey=${API_KEY}`)
     .then((response) => response.data));
 
 const detailsSlice = createSlice({

@@ -1,14 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import CandleDetails from '../components/CandleDetails';
 
-const Details = () => {
-  const details = useSelector((state) => state.details.stock.historical);
-  // eslint-disable-next-line
-  console.log(details);
-
-  return (
-    <div>Details</div>
-  );
-};
+const Details = () => (
+  <div>
+    <h1>Head</h1>
+    <CandleDetails />
+  </div>
+);
 
 export default Details;
