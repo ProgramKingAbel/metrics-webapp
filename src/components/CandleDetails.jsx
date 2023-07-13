@@ -33,6 +33,20 @@ const CandleDetails = () => {
         },
       },
     },
+    theme: {
+      mode: 'dark',
+    },
+    plotOptions: {
+      candlestick: {
+        colors: {
+          upward: '#21C78F',
+          downward: '#F9607B',
+        },
+        wick: {
+          useFillColor: true,
+        },
+      },
+    },
   };
 
   return (
