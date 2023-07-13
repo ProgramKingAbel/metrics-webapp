@@ -29,6 +29,7 @@ const Home = () => {
 
   return (
     <Container>
+      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>Stock-Z</h1>
       <Row style={{ margin: '2rem 1rem', alignItems: 'center' }}>
         <Col xs={10} md={10}>
           <Form.Control
@@ -48,10 +49,29 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          display: 'flex', flexDirection: 'column', marginLeft: '1rem', marginRight: '1rem',
+          display: 'flex',
+          flexDirection: 'column',
+          marginLeft: '1rem',
+          marginRight: '1rem',
+          height: '70vh',
+          overflowY: 'scroll',
+          boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
         }}
       >
-        <ListGroup>
+        <ListGroup
+          style={{ fontSize: '0.6rem' }}
+        >
+          <ListGroup.Item
+            disabled
+            style={{ display: 'flex' }}
+          >
+
+            <Col bg="secondary">symbol</Col>
+            <Col>Company Name</Col>
+            <Col>Price</Col>
+            <Col>Volume</Col>
+            <Col>Beta</Col>
+          </ListGroup.Item>
           {
           displayedStocks.map((stock) => (
             <ListGroup.Item
@@ -64,7 +84,7 @@ const Home = () => {
               }}
             >
               <Col><Badge bg="secondary">{ stock.symbol}</Badge></Col>
-              <Col className="fs-xm-0.5 fs-md-3 fs-lg-2">{ stock.companyName}</Col>
+              <Col>{ stock.companyName}</Col>
               <Col>{parseFloat(stock.price.toFixed(2))}</Col>
               <Col>{ stock.volume}</Col>
               <Col>{parseFloat(stock.beta.toFixed(2))}</Col>

@@ -12,12 +12,12 @@ const Details = () => {
 
     <Container>
       <Button
+        style={{ marginTop: '2rem' }}
         variant="outline-primary"
         onClick={() => navigate('/')}
       >
-        Go back
+        back
       </Button>
-      <h1>Head</h1>
       <CandleDetails />
       <StockScreener />
     </Container>

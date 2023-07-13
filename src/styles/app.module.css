@@ -5,14 +5,5 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  /* background: #272731; */
-  /* color: #434352; */
 }
 
-.negative {
-  color: #F9607B;
-}
-
-.positive {
-  background-color: #21C78F;
-}

@@ -1,32 +1,51 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Stack from 'react-bootstrap/Stack';
+import Table from 'react-bootstrap/Table';
 
 const StockScreener = () => {
   const details = useSelector((state) => state.details.stock.historical);
+  const symbol = useSelector((state) => state.details.stock.symbol);
   if (!details) {
     return <div>Loading...</div>;
   }
   return (
     <>
-      <Stack direction="horizontal" gap={3}>
-        <div className="p-2">Open</div>
-        <div className="p-2">Close</div>
-        <div className="p-2">Change</div>
-        <div className="p-2">% Change</div>
-      </Stack>
-      {
+      <h2
+        style={{ textAlign: 'center', padding: '1rem' }}
+      >
+        {symbol}
+        {' '}
+        Stock Screener
+      </h2>
+      <Table
+        responsive
+      >
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Opening Price</th>
+            <th>Closing Price</th>
+            <th>Price Change</th>
+            <th>% Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
         details.map((item) => (
-          <Stack key={Date.parse(item.date)} direction="horizontal" gap={3}>
-            <div className="p-2">{ item.open }</div>
-            <div className={`p-2 ${item.change < 0 ? 'negative' : 'positive'}`}>{item.close}</div>
-            <div className={`p-2 ${item.change < 0 ? 'negative' : 'positive'}`}>{item.change}</div>
-            <div className={`p-2 ${item.change < 0 ? 'negative' : 'positive'}`}>{item.changePercent}</div>
-          </Stack>
+          <tr
+            key={Date.parse(item.date)}
+          >
+            <td>{ item.date }</td>
+            <td style={{ color: item.change < 0 ? '#F9607B' : '#21C78F' }}>{item.open}</td>
+            <td style={{ background: item.change < 0 ? '#F9607B' : '#21C78F' }}>{item.close}</td>
+            <td style={{ background: item.change < 0 ? '#F9607B' : '#21C78F' }}>{item.change}</td>
+            <td style={{ background: item.change < 0 ? '#F9607B' : '#21C78F' }}>{item.changePercent}</td>
+          </tr>
         ))
 
       }
-
+        </tbody>
+      </Table>
     </>
   );
 };
