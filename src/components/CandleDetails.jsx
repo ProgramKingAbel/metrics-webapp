@@ -4,6 +4,7 @@ import Chart from 'react-apexcharts';
 
 const CandleDetails = () => {
   const details = useSelector((state) => state.details.stock.historical);
+  const symbol = useSelector((state) => state.details.stock.symbol);
   if (!details) {
     return <div>Loading...</div>;
   }
@@ -19,9 +20,10 @@ const CandleDetails = () => {
       chart: {
         type: 'candlestick',
         height: 350,
+        padding: '1rem',
       },
       title: {
-        text: details.symbol,
+        text: `${symbol} Analysis`,
         align: 'left',
       },
       xaxis: {
@@ -33,10 +35,24 @@ const CandleDetails = () => {
         },
       },
     },
+    theme: {
+      mode: 'dark',
+    },
+    plotOptions: {
+      candlestick: {
+        colors: {
+          upward: '#21C78F',
+          downward: '#F9607B',
+        },
+        wick: {
+          useFillColor: true,
+        },
+      },
+    },
   };
 
   return (
-    <div>
+    <div style={{ margin: '1rem', boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px' }}>
       <Chart
         type="candlestick"
         height={400}
