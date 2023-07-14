@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <Container>
-      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>Stock-Z</h1>
+      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>StoX</h1>
       <Row style={{ margin: '2rem 1rem', alignItems: 'center' }}>
         <Col xs={10} md={10}>
           <Form.Control
