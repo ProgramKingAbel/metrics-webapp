@@ -6,7 +6,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('fetchStocks', () => {
-    test('dispatches the correct actions when fetching stocks is successful', () => {
+    test('dispatches the correct actions when fetching stocks', () => {
    
       const store = mockStore({});
   
