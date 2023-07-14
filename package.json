@@ -47,7 +47,7 @@
       "^.+\\.(js|jsx)$": "babel-jest"
     },
     "moduleNameMapper": {
-      "^axios$": "<rootDir>/__mocks__/axios.js"
+      "^axios$": "<rootDir>/src/__mocks__/axios.js"
     }
   },
   "devDependencies": {

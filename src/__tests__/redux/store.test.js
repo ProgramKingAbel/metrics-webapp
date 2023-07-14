@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import stocksReducer from '../redux/features/stocks/stocksSlice';
-import detailsReducer from '../redux/features/details/detailsSlice';
+import stocksReducer from '../../redux/features/stocks/stocksSlice';
+import detailsReducer from '../../redux/features/details/detailsSlice';
 
 describe('Store config', () => {
     let store;
