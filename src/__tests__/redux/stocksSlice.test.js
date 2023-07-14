@@ -30,7 +30,6 @@ describe('fetchStocks', () => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions[0]).toEqual(expect.objectContaining({ type: 'stocks/fetchStocks/pending' }));
       expect(dispatchedActions[1]).toEqual(expect.objectContaining({ type: 'stocks/fetchStocks/rejected' }));
-    
     });
   });
 });

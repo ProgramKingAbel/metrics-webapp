@@ -6,6 +6,10 @@ import store from '../../redux/store';
 import StockScreener from '../../components/StockScreener';
 
 test('renders Details component correctly', () => {
-  const { container } = render(<Provider store={store}><Router><StockScreener /></Router></Provider>);
+  const { container } = render(
+    <Provider store={store}>
+      <Router><StockScreener /></Router>
+    </Provider>,
+  );
   expect(container).toMatchSnapshot();
 });

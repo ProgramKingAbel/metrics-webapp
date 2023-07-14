@@ -6,6 +6,10 @@ import store from '../../redux/store';
 import CandleDetails from '../../components/CandleDetails';
 
 test('renders Details component correctly', () => {
-  const { container } = render(<Provider store={store}><Router><CandleDetails /></Router></Provider>);
+  const { container } = render(
+    <Provider store={store}>
+      <Router><CandleDetails /></Router>
+    </Provider>,
+  );
   expect(container).toMatchSnapshot();
 });

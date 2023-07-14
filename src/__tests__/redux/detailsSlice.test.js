@@ -7,10 +7,8 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 jest.mock('axios');
 
-
 describe('fetchDetails', () => {
   test('dispatches the correct actions when fetching stock details is fulfilled', () => {
-
     const store = mockStore({});
     const responseData = { stocks: [] };
     axios.get.mockResolvedValueOnce({ data: responseData });
