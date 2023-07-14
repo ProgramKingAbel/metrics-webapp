@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Details component correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <button
+      class="btn btn-outline-primary"
+      style="margin-top: 2rem;"
+      type="button"
+    >
+      back
+    </button>
+    <div>
+      Loading...
+    </div>
+    <div>
+      Loading...
+    </div>
+  </div>
+</div>
+`;
