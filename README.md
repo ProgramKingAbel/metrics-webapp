@@ -1,12 +1,12 @@
 <a name="readme-top"></a>
 
 
-> # Stock-Z
+> # StoX
 
 | Project View Screenshots                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------- |
-| <div align="center"><img src="./src/project-img/main-page.JPG" alt="screenshot" width="auto" height="auto"/></div>   |
-| <div align="center"><img src="./src/project-img/pop-up-page.JPG" alt="screenshot" width="auto" height="auto"/></div> |
+| <div align="center"><img src="./src/assets/images/scrn2.png" alt="screenshot" width="500px" height="300px"/></div>   |
+| <div align="center"><img src="./src/assets/images/scrn4.png" alt="screenshot" width="500px" height="250px"/></div> |
 
 
 <!-- TABLE OF CONTENTS -->
@@ -14,7 +14,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Stock-Z ](#-Stock-Z-)
+- [📖 Stock-X ](#-StoX-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -35,9 +35,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Stock-Z <a name="about-project"></a>
+# 📖 StoX <a name="about-project"></a>
 
-**Stock-Z** is a web application for financial institutins that pulls data of available stocks in the market and provides analysis in trends of a particular stock selected by user over a certain period of time e.g 14days in a candlestick graph.
+**StoX** is a web application for financial institutins that pulls data of available stocks in the market and provides analysis in trends of a particular stock selected by user over a certain period of time e.g 14days in a candlestick graph.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -83,7 +83,8 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link - Available on render](https://space-travellers-hub-2ve1.onrender.com/)
+- [Live Demo Link - Available on render](https://stox-ye3a.onrender.com/)
+- [Live Walkthrough Video - Available on Loom](https://www.loom.com/share/709250d4b4884571b237f7cb127be45e?sid=09cc3599-7f56-49e6-bab9-6aae687249a3)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
