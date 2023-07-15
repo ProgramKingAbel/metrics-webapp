@@ -186,7 +186,7 @@ If you like this project give it a `star`.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and my Coding Partners.
+I would like to thank Microverse and my Coding Partners and Designer of the App [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
