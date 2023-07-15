@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <Container>
-      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>Stock-Z</h1>
+      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>StoX</h1>
       <Row style={{ margin: '2rem 1rem', alignItems: 'center' }}>
         <Col xs={10} md={10}>
           <Form.Control
@@ -49,8 +49,6 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          // padding: '1rem',
-          // flexWrap: 'wrap',
           height: '70vh',
           overflowY: 'scroll',
           boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
@@ -60,24 +58,9 @@ const Home = () => {
           horizontal
           style={{
             fontSize: '1rem',
-            // display: 'flex',
             flexWrap: 'wrap',
-            // gridTemplateColumns: '1fr 1fr',
-            // margin: '0 1rem 1rem 1rem',
-            // gap: '1rem',
           }}
         >
-          {/* <ListGroup.Item
-            disabled
-            style={{ display: 'flex' }}
-          >
-
-            <Col bg="secondary">symbol</Col>
-            <Col>Company Name</Col>
-            <Col>Price</Col>
-            <Col>Volume</Col>
-            <Col>Beta</Col>
-          </ListGroup.Item> */}
           {
           displayedStocks.map((stock) => (
             <ListGroup.Item
@@ -90,7 +73,7 @@ const Home = () => {
               }}
             >
               <Col><Badge bg="secondary">{ stock.symbol}</Badge></Col>
-              <Col>{ stock.companyName}</Col>
+              <Col style={{ fontWeight: 'bold' }}>{ stock.companyName}</Col>
               <Col>
                 <span>
                   Stock Price:
