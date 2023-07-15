@@ -84,7 +84,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 - [Live Demo Link - Available on render](https://stox-ye3a.onrender.com/)
-- [Live Walkthrough Video - Available on Loom](https://www.loom.com/share/709250d4b4884571b237f7cb127be45e?sid=09cc3599-7f56-49e6-bab9-6aae687249a3)
+- [Live Walkthrough Video - Available on Loom](https://www.loom.com/share/d009c38bf9db4888b5cae56f70d52e3a?sid=d46c91ce-5070-4aba-a4bd-0e4bc11627a9)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
