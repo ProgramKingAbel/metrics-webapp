@@ -29,9 +29,15 @@ const Home = () => {
 
   return (
     <Container>
-      <h1 style={{ padding: '1rem 0 0', textAlign: 'center', color: '#21C78F' }}>StoX</h1>
-      <Row style={{ margin: '2rem 1rem', alignItems: 'center' }}>
-        <Col xs={10} md={10}>
+      <Row style={{ margin: '1rem 0.1rem', alignItems: 'center' }}>
+        <Col style={{ textAlign: 'center', fontSize: '1rem' }}>
+          <span>
+            <i className="uil uil-angle-left-b" />
+            {' '}
+            stoX
+          </span>
+        </Col>
+        <Col xs={6}>
           <Form.Control
             type="text"
             placeholder="Search stock..."
@@ -47,52 +53,56 @@ const Home = () => {
           />
         </Col>
       </Row>
-      <Row
+      <ListGroup
+        variant="flush"
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginLeft: '1rem',
-          marginRight: '1rem',
-          height: '70vh',
-          overflowY: 'scroll',
-          boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
+          fontSize: '1rem',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0.5rem',
         }}
       >
-        <ListGroup
-          style={{ fontSize: '0.6rem' }}
-        >
+        {
+        displayedStocks.map((stock) => (
           <ListGroup.Item
-            disabled
-            style={{ display: 'flex' }}
+            style={{ border: '1px solid #6c757d', display: 'grid', gridTemplateColumns: '1fr' }}
+            action
+            key={stock.symbol}
+            onClick={() => {
+              dispatch(fetchDetails(stock.symbol));
+              navigate(`/details/${stock.symbol}`);
+            }}
           >
-
-            <Col bg="secondary">symbol</Col>
-            <Col>Company Name</Col>
-            <Col>Price</Col>
-            <Col>Volume</Col>
-            <Col>Beta</Col>
+            <Col style={{ display: 'flex', flexDirection: 'column' }}>
+              <i style={{ fontSize: '2rem', color: '#6c757d', alignSelf: 'flex-end' }} className="uil uil-arrow-circle-right" />
+              <Badge style={{ padding: '1rem' }} bg="secondary">{stock.symbol}</Badge>
+            </Col>
+            <Col style={{ fontWeight: 'bold' }}>{ stock.companyName}</Col>
+            <Col>
+              <span>
+                Price:
+                {'  '}
+                {parseFloat(stock.price.toFixed(2))}
+              </span>
+            </Col>
+            <Col>
+              <span>
+                Volume:
+                {'  '}
+                {stock.volume}
+              </span>
+            </Col>
+            <Col>
+              <span>
+                Beta:
+                {'  '}
+                {parseFloat(stock.beta.toFixed(2))}
+              </span>
+            </Col>
           </ListGroup.Item>
-          {
-          displayedStocks.map((stock) => (
-            <ListGroup.Item
-              style={{ display: 'flex' }}
-              action
-              key={stock.symbol}
-              onClick={() => {
-                dispatch(fetchDetails(stock.symbol));
-                navigate(`/details/${stock.symbol}`);
-              }}
-            >
-              <Col><Badge bg="secondary">{ stock.symbol}</Badge></Col>
-              <Col>{ stock.companyName}</Col>
-              <Col>{parseFloat(stock.price.toFixed(2))}</Col>
-              <Col>{ stock.volume}</Col>
-              <Col>{parseFloat(stock.beta.toFixed(2))}</Col>
-            </ListGroup.Item>
-          ))
-            }
-        </ListGroup>
-      </Row>
+        ))
+          }
+      </ListGroup>
     </Container>
   );
 };

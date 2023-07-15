@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +7,8 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
 }

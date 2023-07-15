@@ -8,7 +8,7 @@ exports[`renders Home component correctly 1`] = `
     <h1
       style="padding: 1rem 0px 0px; text-align: center; color: rgb(33, 199, 143);"
     >
-      Stock-Z
+      StoX
     </h1>
     <div
       class="row"
@@ -36,46 +36,12 @@ exports[`renders Home component correctly 1`] = `
     </div>
     <div
       class="row"
-      style="display: flex; flex-direction: column; margin-left: 1rem; margin-right: 1rem; height: 70vh; overflow-y: scroll; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;"
+      style="height: 70vh; overflow-y: scroll; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;"
     >
       <div
-        class="list-group"
-        style="font-size: 0.6rem;"
-      >
-        <div
-          aria-disabled="true"
-          class="list-group-item disabled"
-          style="display: flex;"
-          tabindex="-1"
-        >
-          <div
-            bg="secondary"
-            class="col"
-          >
-            symbol
-          </div>
-          <div
-            class="col"
-          >
-            Company Name
-          </div>
-          <div
-            class="col"
-          >
-            Price
-          </div>
-          <div
-            class="col"
-          >
-            Volume
-          </div>
-          <div
-            class="col"
-          >
-            Beta
-          </div>
-        </div>
-      </div>
+        class="list-group list-group-horizontal"
+        style="font-size: 1rem; flex-wrap: wrap;"
+      />
     </div>
   </div>
 </div>
