@@ -53,11 +53,6 @@ const Home = () => {
           />
         </Col>
       </Row>
-      {/* <Row
-        style={{
-          boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
-        }}
-      > */}
       <ListGroup
         variant="flush"
         style={{
@@ -108,7 +103,6 @@ const Home = () => {
         ))
           }
       </ListGroup>
-      {/* </Row> */}
     </Container>
   );
 };
