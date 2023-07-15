@@ -49,19 +49,25 @@ const Home = () => {
       </Row>
       <Row
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginLeft: '1rem',
-          marginRight: '1rem',
+          // padding: '1rem',
+          // flexWrap: 'wrap',
           height: '70vh',
           overflowY: 'scroll',
           boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
         }}
       >
         <ListGroup
-          style={{ fontSize: '0.6rem' }}
+          horizontal
+          style={{
+            fontSize: '1rem',
+            // display: 'flex',
+            flexWrap: 'wrap',
+            // gridTemplateColumns: '1fr 1fr',
+            // margin: '0 1rem 1rem 1rem',
+            // gap: '1rem',
+          }}
         >
-          <ListGroup.Item
+          {/* <ListGroup.Item
             disabled
             style={{ display: 'flex' }}
           >
@@ -71,11 +77,11 @@ const Home = () => {
             <Col>Price</Col>
             <Col>Volume</Col>
             <Col>Beta</Col>
-          </ListGroup.Item>
+          </ListGroup.Item> */}
           {
           displayedStocks.map((stock) => (
             <ListGroup.Item
-              style={{ display: 'flex' }}
+              style={{ width: '200px', height: '200px' }}
               action
               key={stock.symbol}
               onClick={() => {
@@ -85,9 +91,27 @@ const Home = () => {
             >
               <Col><Badge bg="secondary">{ stock.symbol}</Badge></Col>
               <Col>{ stock.companyName}</Col>
-              <Col>{parseFloat(stock.price.toFixed(2))}</Col>
-              <Col>{ stock.volume}</Col>
-              <Col>{parseFloat(stock.beta.toFixed(2))}</Col>
+              <Col>
+                <span>
+                  Stock Price:
+                  {'  '}
+                  {parseFloat(stock.price.toFixed(2))}
+                </span>
+              </Col>
+              <Col>
+                <span>
+                  Volume:
+                  {'  '}
+                  {stock.volume}
+                </span>
+              </Col>
+              <Col>
+                <span>
+                  Beta:
+                  {'  '}
+                  {parseFloat(stock.beta.toFixed(2))}
+                </span>
+              </Col>
             </ListGroup.Item>
           ))
             }
