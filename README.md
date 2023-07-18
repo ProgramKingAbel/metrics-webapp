@@ -6,7 +6,7 @@
 | Project View Screenshots                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------- |
 | <div align="center"><img src="src/assets/images/stox-app.onrender.com_ (3).png" alt="screenshot" width="500px" height="300px"/></div>   |
-| <div align="center"><img src="./src/assets/images/scrn4.png" alt="screenshot" width="500px" height="250px"/></div> |
+| <div align="center"><img src="./src/assets/images/scrn4.png" alt="screenshot" width="500px" height="300px"/></div> |
 
 
 <!-- TABLE OF CONTENTS -->
