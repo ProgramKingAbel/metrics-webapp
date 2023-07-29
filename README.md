@@ -37,7 +37,7 @@
 
 # 📖 StoX <a name="about-project"></a>
 
-**StoX** is a web application for financial institutins that pulls data of available stocks in the market and provides analysis in trends of a particular stock selected by user over a certain period of time e.g 14days in a candlestick graph.
+**StoX** is a web application for financial institutions that pulls data on available stocks in the market and provides analysis of trends of a particular stock selected by the user over a certain period of time e.g. 14 days in a candlestick graph. This helps traders and investors to make informed and impactful business decisions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
